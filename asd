@@ -779,7 +779,7 @@ local function MainTab()
     local ReplicateTextEffect = RS:WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_net@0.2.0"):WaitForChild("net"):WaitForChild("RE/ReplicateTextEffect") 
     
     local BlatantConfig = {
-        Spam_Count = 20,
+        Spam_Count = 10,
         Spam_Delay = 0.001,
         Total_Stages = 1,
         Delay_Complete = 0.26,
@@ -823,7 +823,7 @@ local function MainTab()
                 safeFire(function() 
                     REF:InvokeServer() 
                 end)
-                
+                task.wait(0.1)
                      safeFire(function() 
                     RFK:InvokeServer() 
                 end)
