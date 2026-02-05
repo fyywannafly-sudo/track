@@ -823,10 +823,7 @@ local function MainTab()
                 safeFire(function() 
                     REF:InvokeServer() 
                 end)
-                task.wait(0.1)
-                safeFire(function() 
-                    RFK:InvokeServer() 
-                end)
+                
                 
                 v2Casting = false 
             end
@@ -867,7 +864,9 @@ local function MainTab()
                 end
             end
             
-           
+                safeFire(function() 
+                    RFK:InvokeServer() 
+                end)
             task.wait(BlatantConfig.Delay_Cancel)
         end
     end
@@ -1868,3 +1867,5 @@ end
     task.spawn(SettingTab2)
 	task.spawn (MainTab)
     task.spawn (PlayerTabFunction)
+
+                
