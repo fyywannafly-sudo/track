@@ -824,7 +824,9 @@ local function MainTab()
                     REF:InvokeServer() 
                 end)
                 
-                
+                     safeFire(function() 
+                    RFK:InvokeServer() 
+                end)
                 v2Casting = false 
             end
         end)
@@ -864,9 +866,6 @@ local function MainTab()
                 end
             end
             
-                safeFire(function() 
-                    RFK:InvokeServer() 
-                end)
             task.wait(BlatantConfig.Delay_Cancel)
         end
     end
